@@ -1,0 +1,137 @@
+body {
+  background: url('http://ipic.su/img/img7/fs/dendi(1).1571830092.png') no-repeat center top / 100%;
+}
+.plate {
+  position: absolute;
+  bottom: -30%;
+  left: 50%;
+}
+.plate:before {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  left: -50%;
+  transform: translate(-50%, -50%) rotateX(45deg);
+}
+.plate:checked {
+  opacity: 0;
+}
+.plate-1 {
+  animation: plate-moving-1 10s ease 3  forwards;
+}
+.plate-2 {
+  animation: plate-moving-2 13s ease 3 5s forwards;
+}
+.plate-3 {
+  animation: plate-moving-3 15s ease 3 8s forwards;
+}
+.plate-4 {
+  animation: plate-moving-4 11s ease 3 15s forwards;
+}
+.plate-5 {
+  animation: plate-moving-5 18s ease 3 19s forwards;
+}
+
+/*Анимация для первой тарелки */
+@keyframes plate-moving-1 {
+  0% {
+    left: 50%;
+    bottom: 0%;
+    transform: translate(-50%, -50%) rotateX(45deg);
+  }
+  50% {
+    bottom: 60%;
+  }
+  100% {
+    left: 30%;
+    bottom: 50%;
+    transform: translate(-50%, -50%) rotateX(45deg) scale(0);
+  }
+}
+
+/*Анимация для второй тарелки */
+@keyframes plate-moving-2 {
+  0% {
+    left: 50%;
+    bottom: 0%;
+    transform: translate(-50%, -50%) rotateX(45deg);
+  }
+  50% {
+    bottom: 70%;
+  }
+  100% {
+    left: 75%;
+    bottom: 55%;
+    transform: translate(-50%, -50%) rotateX(45deg) scale(0);
+  }
+}
+
+/*Анимация для третьей тарелки */
+@keyframes plate-moving-3 {
+  0% {
+    left: 50%;
+    bottom: 0%;
+    transform: translate(-50%, -50%) rotateX(45deg);
+  }
+  50% {
+    bottom: 70%;
+  }
+  100% {
+    left: 15%;
+    bottom: 40%;
+    transform: translate(-50%, -50%) rotateX(45deg) scale(0);
+  }
+}
+
+/*Анимация для четвертой тарелки */
+@keyframes plate-moving-4 {
+  0% {
+    left: 50%;
+    bottom: 0%;
+    transform: translate(-50%, -50%) rotateX(45deg);
+  }
+  50% {
+    bottom: 65%;
+  }
+  100% {
+    left: 40%;
+    bottom: 50%;
+    transform: translate(-50%, -50%) rotateX(45deg) scale(0);
+  }
+}
+
+/*Анимация для пятой тарелки */
+@keyframes plate-moving-5 {
+  0% {
+    left: 50%;
+    bottom: 0%;
+    transform: translate(-50%, -50%) rotateX(45deg);
+  }
+  50% {
+    bottom: 60%;
+  }
+  100% {
+    left: 65;
+    bottom: 40%;
+    transform: translate(-50%, -50%) rotateX(45deg) scale(0);
+  }
+}
+.plate:checked {
+  counter-increment: post;
+}
+.score:after {
+  content: counter(post);
+  font-size: 28px;
+  font-weight: bold;
+  color: red;
+}
+.counter  {
+  border: 5px solid green;
+  border-radius: 5px;
+  width: 5%;
+  text-align: center;
+  background: #C5E1A5;
+}
